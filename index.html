@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLAMES Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="easterTitle">💘 FLAMES Game 🔥</h2>
+    
+    <div class="input-container">
+      <input type="text" id="name1" placeholder="Enter name 1" />
+      <button class="clear-btn" onclick="document.getElementById('name1').value = ''">×</button>
+    </div>
+    
+    <div class="input-container">
+      <input type="text" id="name2" placeholder="Enter name 2" />
+      <button class="clear-btn" onclick="document.getElementById('name2').value = ''">×</button>
+    </div>
+    
+    <button onclick="calculateFLAMES()">Check 🔍</button>
+    <div class="result" id="result"></div>
+    <div class="result" id="quote"></div>
+    <div class="result" id="tip"></div>
+    <button class="reset-page" onclick="reset()">Reset</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    <details>
+      <summary>How FLAMES Works</summary>
+      <p>
+        The FLAMES game matches two names by eliminating common letters and counting the rest.
+        The remaining number is used to determine the relationship:
+        <strong>F</strong> - Friends, <strong>L</strong> - Love, <strong>A</strong> - Affection,
+        <strong>M</strong> - Marriage, <strong>E</strong> - Enemies, <strong>S</strong> - Siblings.
+        It's just a fun compatibility game!
+      </p>
+    </details>
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="successSound" src="https://www.soundjay.com/human/sounds/applause-8.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="https://www.soundjay.com/button/sounds/button-10.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
